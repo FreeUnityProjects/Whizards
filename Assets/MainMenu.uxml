@@ -1,0 +1,60 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements"
+         xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements"
+         noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-direction: row;">
+        <ui:Button text="Start&#x9;" display-tooltip-when-elided="true" name="start-button"
+                   style="background-color: rgb(195, 69, 1);"/>
+        <ui:Label text="SCORE" display-tooltip-when-elided="true" name="score"
+                  style="flex-direction: column; white-space: nowrap; -unity-text-align: upper-left;"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="Buttons" style="flex-direction: row; margin-top: 12px;">
+        <ui:Button text="Pause" display-tooltip-when-elided="true" name="cmd_pause"
+                   class="BlueButton defaultBorderRadius CursorPointer" style="flex-grow: 1; margin-right: 10px;"/>
+        <ui:Button text="Play" display-tooltip-when-elided="true" name="cmd_play"
+                   class="BlueButton defaultBorderRadius CursorPointer" style="flex-grow: 1; margin-right: 10px;"/>
+        <ui:Button display-tooltip-when-elided="true" name="cmd_openOption"
+                   class="BlueButton defaultBorderRadius CursorPointer" style="width: 103px;">
+            <ui:VisualElement class="CursorPointer"
+                              style="background-image: url(&apos;project://database/Assets/Art/Icons/gear__icon.png&apos;); 
+                              flex-grow: 1; -unity-background-scale-mode: scale-to-fit;"/>
+        </ui:Button>
+    </ui:VisualElement>
+    <ui:VisualElement name="StartScreenBackground" class="DarkeningBackground">
+        <ui:VisualElement name="CenteredContent1" class="CenteredContentWrapper">
+            <ui:VisualElement name="StartScreenImage" class="Blue5Background defaultBorderRadius"
+                              style="height: 600px; overflow: hidden;">
+                <ui:VisualElement name="UpperPart" style="flex-grow: 1; justify-content: space-between;">
+                    <ui:VisualElement name="ScoreWrapper" style="align-items: center;">
+                        <ui:VisualElement name="Score" style="align-items: center; margin-top: 77px;">
+                            <ui:VisualElement name="ScoreImage"
+                                              style="width: 70px; height: 70px; background-color: rgb(231, 71, 29); border-top-left-radius: 52px; border-bottom-left-radius: 52px; border-top-right-radius: 52px; border-bottom-right-radius: 52px;"/>
+                            <ui:Label text="1234" display-tooltip-when-elided="true" name="lbl_score"
+                                      style="color: rgb(255, 255, 255); font-size: 42px; margin-top: 12px;"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="OptionsMenu" class="DarkeningBackground" style="display: none;">
+        <ui:VisualElement name="CenteredContent2" class="CenteredContentWrapper">
+            <ui:VisualElement name="OptionList" class="Blue5Background defaultBorderRadius OptionList">
+                <ui:VisualElement name="OptionElement" class="OptionElement">
+                    <ui:Toggle label="Fullscreen" name="NorLibFullScreen"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="OptionElement" class="OptionElement">
+                    <ui:Slider picking-mode="Ignore" label="Background Music" value="42" high-value="100"
+                               name="NorLibBackgroundMusic"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="OptionElement" class="OptionElement">
+                    <ui:Slider picking-mode="Ignore" label="Soundeffects" value="42" high-value="100"
+                               name="NorLibSoundeffectMusic"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="Buttons" style="flex-direction: row; margin-top: 12px;">
+                <ui:Button text="close" display-tooltip-when-elided="true" name="cmd_closeOption"
+                           class="BlueButton defaultBorderRadius CursorPointer" style="flex-grow: 1;"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
